@@ -25,7 +25,16 @@
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
-
+1. Fork deze repository
+2. Open de geforkde repository naar je lokale computer
+3. **Check of je node hebt geinstalleerd** zo niet? volg stap 4 t/m ..
+4.  open je teminal
+5.  typ `npm install`, zo worden alle node.js bestanden geinstalleerd
+6.  Je kan gebruik maken van nodemon.js. Zo ja? wanneer node.js volledig is geinstalleerd, typ je `npm install nodemon`
+7.  Nu kan je volledig gebruik maken van de server. Je kan de server opstarten door in de terminal het volgende in te typen: `npm start`
+8.  **Heb je nodemon geinstalleerd?** dan kan je ook nodemon opstarten. Je volgt dezelfde stappen, alleen vul je het volgende in de terminal: `npm run dev`
+9.  Coderen maar!!
+    
 ## Bronnen
 
 ## Licentie
