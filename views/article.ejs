@@ -1,7 +1,45 @@
 <%- include('./partials/head') %>
 
 <main>
-    
+    <article>
+        <h1><%-article.title.rendered%></h1>
+        <img src="<%-article.jetpack_featured_media_url%>" alt="voorpagina afbeelding">
+
+        <div>
+            <a href="">vacatures</a>
+            
+            <time>
+                <%= new Date(article.date).getDate() %>/<%= new Date(article.date).getMonth() %>/<%= new
+                Date(article.date).getFullYear() %>
+            </time>
+
+            <form action="/article/<%=article.slug%>" method="post">
+                <input type="hidden" name="slug" value="<%-article.slug%>">
+                <label for="copy-link"><%= article.copy  %> keer gedeelt</label>
+                <button type="submit" id="share"><%-share%> ></button>
+            </form>
+
+            <strong><%-article.excerpt.rendered%></strong>
+
+        </div>
+
+
+
+
+
+        <section class="article-detail_author">
+            <section>
+            <h2><span class="article-detail_author_type">Auteur:</span> <%=article.yoast_head_json.author%></h2>
+            <img src="https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=">
+            </section>
+            <section>
+                <h2><span class="article-detail_author_type">Leestijd:</span> < 3 min</h2>
+            </section>
+        </section>
+        <section class="article-detail_content">
+            <%-article.content.rendered%>
+        </section>
+    </article>
 </main>
 
 
