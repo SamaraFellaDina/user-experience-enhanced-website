@@ -18,16 +18,13 @@
             <%= new Date(article.date).getDate() %>/<%= new Date(article.date).getMonth() %>/<%= new Date(article.date).getFullYear() %>
           </time>
           <span><%=article.shares%> keer gedeeld</span>   
-      </div>
-
+        </div>
         <p><%- article.excerpt.rendered %></p>
-
-
       </li>
       <%}
     })%>
   </ul>
-  <h1>Onze supporters</h1>
+
 </main>
 <%- include('./partials/foot') %>
 

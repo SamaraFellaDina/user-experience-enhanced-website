@@ -97,11 +97,11 @@ header {
     padding: var(--default-padding);
     background-color: var(--primary-color-3);
     border-bottom: var(--border-style-black);
-
     
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 header div {
@@ -118,6 +118,7 @@ header ul {
 }
 
 footer {
+    
     background-color: var(--primary-color-1);
     color: var(--primary-color-4);
     width: 100%;

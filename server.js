@@ -10,10 +10,10 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
 // definieren van variabelen
-const apiUrl = 'https://redpers.nl/wp-json/wp/v2'
-const apiPosts = apiUrl + '/posts'
-const apiUsers = apiUrl + '/users'
-const apiCategories = apiUrl + '/categories'
+const apiUrl = 'https://redpers.nl/wp-json/wp/v2/'
+const apiPosts = apiUrl + 'posts'
+const apiUsers = apiUrl + 'users'
+const apiCategories = apiUrl + 'categories'
 
 const apiShares = 'https://fdnd-agency.directus.app/items/redpers_shares'
 
