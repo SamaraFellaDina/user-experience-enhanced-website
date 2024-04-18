@@ -19,7 +19,7 @@ const apiShares = 'https://fdnd-agency.directus.app/items/redpers_shares'
 
 // Routes aanroepen
 app.get('/', (request, response) => {
-    fetchJson(apiPosts).then((articleData) => {
+    fetchJson(apiPosts + "?per_page=4").then((articleData) => {
       fetchJson(apiShares).then((shareData) => {
         articleData.map((articles) => {
           Object.assign(articles, {
