@@ -94,7 +94,6 @@ a:hover {
 header {
     width: 100%;
     height: 50px;
-    padding: var(--default-padding);
     background-color: var(--primary-color-3);
     border-bottom: var(--border-style-black);
     
@@ -102,6 +101,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: var(--default-padding);
 }
 
 header div {
@@ -118,7 +118,6 @@ header ul {
 }
 
 footer {
-    
     background-color: var(--primary-color-1);
     color: var(--primary-color-4);
     width: 100%;
