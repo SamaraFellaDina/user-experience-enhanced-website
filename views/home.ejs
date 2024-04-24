@@ -7,8 +7,6 @@
         <a href="/artikel/<%=article.slug%>">
 
           <picture>
-            <source srcset="<%=article.jetpack_featured_media_url%>?format=avif" type="image/avif">
-            <source srcset="<%=article.jetpack_featured_media_url%>?format=webp" type="image/webp">
             <img src="<%=article.jetpack_featured_media_url%>"
             alt="artikel afbeelding"
             width="<%=article.yoast_head_json.og_image[0].width%>" 
