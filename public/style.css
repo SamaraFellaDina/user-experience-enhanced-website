@@ -21,7 +21,7 @@
     --secondary-color-2:#F2D930;
 
     --font-sans-serif:"Inter", arial, sans-serif;
-    --font-serif: "Merriweather", serif;
+    --font-serif: "Merriweather", Georgia, serif;
     --border-style-black: 2px solid var(--primary-color-1);
     --border-style-white: 2px solid var(--primary-color-3);
 
@@ -29,6 +29,9 @@
 }
 
 html {
+    font-family: sans-serif;
+    font-family: arial;
+    font-family: "inter";
     font-family: var(--font-sans-serif);
 }
 
@@ -73,7 +76,11 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: serif;
+    font-family: Georgia;
+    font-family: "Merriweather";
     font-family: var(--font-serif);
+
     font-weight: 900;
 }
 
