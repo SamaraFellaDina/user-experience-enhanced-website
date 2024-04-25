@@ -36,6 +36,7 @@ app.get('/artikel/:slug', function (request, response) {
    fetchJson(apiPosts + '?slug=' + request.params.slug),
    fetchJson(apiShares + "?filter[slug][_eq]=" + request.params.slug)
   ]).then(([apiData, shareData ]) => {
+      console.log(shareData)
       response.render("article.ejs", {
           article : apiData[0],
           share : shareData.data[0].shares

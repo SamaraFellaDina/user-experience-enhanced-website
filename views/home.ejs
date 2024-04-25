@@ -17,8 +17,9 @@
         
         <div>
           <time>
-            <%= new Date(article.date).getDate() %>/<%= new Date(article.date).getMonth() %>/<%= new Date(article.date).getFullYear() %>
+            <%= String(new Date(article.date).getDate()).padStart(2, '0') %>/<%= String(new Date(article.date).getMonth() + 1).padStart(2, '0') %>/<%= new Date(article.date).getFullYear() %>
           </time>
+
           <span><%=article.shares%> keer gedeeld</span>   
         </div>
         <p><%- article.excerpt.rendered %></p>
