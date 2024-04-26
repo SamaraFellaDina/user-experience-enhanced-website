@@ -60,6 +60,8 @@ ul,
 li,
 button {
     font-family: var(--font-sans-serif);
+    font-size: 1.1em;
+    line-height: 1.5em;
 }
 
 img {
@@ -72,7 +74,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+blockquote p {
     font-family: serif;
     font-family: Georgia;
     font-family: "Merriweather";
@@ -81,6 +84,14 @@ h6 {
     font-weight: 900;
 }
 
+blockquote {
+    font-size: 38px;
+    font-weight: bold;
+    padding: .5em;
+    font-style: italic;
+    color: var(--primary-color-1);
+    line-height: 1.5em;
+}
 a {
     color: var(--active-color-1);
     text-decoration: none;
@@ -154,7 +165,7 @@ footer div details summary {
 
 main { 
     padding: 2em;
-    max-width: 833px;
+    max-width: 768px;
     margin: auto;
 }
 
@@ -164,6 +175,10 @@ button#share {
     flex-direction: row;
     align-items: center;
     gap: .5em;
+}
+
+button#share-active {
+    background-color: var(--secondary-color-1);
 }
 
 .article-date-header {
