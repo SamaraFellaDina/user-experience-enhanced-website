@@ -26,6 +26,8 @@
     --border-style-white: 2px solid var(--primary-color-3);
 
     --default-padding: 1em;
+
+    --transition-flow: 0.5s ease, color .1s ease;
 }
 
 html {
@@ -103,7 +105,7 @@ a:active {
 
 a:hover {
     color: var(--active-color-1_hover);
-    transition: 100ms 200ms ease;
+    transition: var(--transition-flow);
 }
 
 button {
@@ -112,7 +114,7 @@ button {
     background: var(--active-color-1);
     color: white;
     border: var(--border-style-black);
-    transition: 0.5s ease, color .1s ease;
+    transition: var(--transition-flow);
     font-size: 1em;
 }
 
@@ -124,6 +126,12 @@ button:hover {
 a,
 button {
     cursor: pointer;
+}
+
+main { 
+    padding: 2em;
+    max-width: 768px;
+    margin: auto;
 }
 
 header {
@@ -148,37 +156,73 @@ header img {
     height: auto;
 }
 
-header ul {
+header ul,
+header input {
     display: none;
 }
 
 footer {
     background-color: var(--primary-color-1);
     color: var(--primary-color-4);
+    margin: auto;
     width: 100%;
+    padding: var(--default-padding)
+}
+
+footer div {
+    padding: 1em 0;
 }
 
 footer div details summary {
     font-size: 1.2em;
     text-transform: uppercase;
+    padding: 1em 0;
+    border-top: var(--border-style-white);
 }
 
-main { 
-    padding: 2em;
-    max-width: 768px;
-    margin: auto;
+footer div details summary:last-child {
+    border-bottom: var(--border-style-white);
 }
 
+footer div details summary:hover {
+    color: var(--active-color-1);
+    transition: var(--transition-flow);
+    
+}
+
+footer div details summary::marker {
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 0;
+    margin-right: 8px; 
+}
 
 button#share {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: .5em;
+    fill: var(--primary-color-4);
+    background-color: var(--primary-color-2);
 }
 
-button#share-active {
-    background-color: var(--secondary-color-1);
+button#share::before{
+    background-color: var(--primary-color-2);
+    fill: var(--primary-color-4);
+}
+
+button#share::after {
+    fill: var(--active-color-1);
+}
+
+button#share:hover {
+    background-color: var(--primary-color-1);
+}
+
+button#share::after {
+    fill: var(--active-color-1);
+
 }
 
 .article-date-header {
