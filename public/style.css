@@ -138,6 +138,10 @@ main {
     margin: auto;
 }
 
+main img {
+    border: var(--border-style-black);
+}
+
 header {
     width: 100%;
     height: 50px;
@@ -252,33 +256,6 @@ button#share::after {
     padding: .5em;
 }
 
-/* Style for the button */
-.checkbox-button {
-    display: inline-block;
-    background-color: var(--primary-color-2);
-    padding: .5em;
-    font-weight: 900;
-    cursor: pointer;
-    border: var(--border-style-black);
-}
-
-/* Hide the actual checkbox */
-#like-checkbox {
-    opacity: 0;
-    cursor: pointer;
-    display: none;}
-
-/* Style for the checked state */
-#like-checkbox:checked + .checkbox-button {
-    background-color: var(--secondary-color-2);
-}
-
-/* Hover effect */
-#like-counter:hover .checkbox-button {
-    color: var(--primary-color-3);
-    background-color: var(--primary-color-1);
-    transition: var(--transition-flow);
-}
 
 
 
