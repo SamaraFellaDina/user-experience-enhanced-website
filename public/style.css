@@ -200,14 +200,6 @@ footer div details summary:hover {
     
 }
 
-footer div details summary::marker {
-    display: inline-block;
-    content: '';
-    width: 0;
-    height: 0;
-    margin-right: 8px; 
-}
-
 .main-footer{
     padding: 1em;
 }
@@ -251,42 +243,42 @@ button#share::after {
     gap: .5em;
 }
 
+.categories-home li {
+    background-color: var(--primary-color-1);
+}
+
+.categories-home h1{
+    color: var(--primary-color-4);
+    padding: .5em;
+}
+
 form#like-counter {
     background-color: var(--primary-color-2);
     padding: .5em;
     font-weight: 900;
     cursor: pointer;
-    border: var(--border-style-black);
+    border: var(--border-style-black);     
 }
 
-form#like-counter input[type='checkbox']{
-    display: none;
-}
-
-form#like-counter [for=like]{
-    display: flex;
-    align-items: center;
-    gap: .5em;
-}
-
-form#like-counter [for=like] svg{
-    fill: var(--primary-color-1);
-    height: 2em;
-}
-
-form#like-counter label[for=like]:hover{
-    fill: var(--primary-color-3);
-    color: var(--primary-color-3);
-}
-
-form#like-counter .like-checkbox {
+form#like-counter input[id='like-checkbox']{
     position: absolute;
     left: -100vw;
 }
 
+form#like-counter:hover{
+    color: var(--primary-color-3);
+    background-color: var(--primary-color-1);
+    transition: var(--transition-flow);
+}
 
+form#like-counter .like-checkbox {
+    position: ;
+    left: -100vw;
+}
 
-
+[id="like-checkbox"]:checked + form#like-counter {
+    background-color: var(--secondary-color-2);
+  }
 
 
 form#like-counter-liked {
@@ -302,16 +294,6 @@ form#like-counter-liked input[type='checkbox']{
     display: none;
 }
 
-form#like-counter-liked [for=like]{
-    display: flex;
-    align-items: center;
-    gap: .5em;
-}
-
-form#like-counter-liked [for=like] svg{
-    fill: var(--primary-color-4);
-    height: 2em;
-}
 
 
 
