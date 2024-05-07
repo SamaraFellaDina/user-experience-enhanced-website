@@ -19,10 +19,9 @@
                 </time>
           </div>
 
-            <form action="/article/<%=article.slug%>" method="post">
-                <input type="hidden" name="slug" value="<%-article.slug%>">
-                <label for="copy-link"><%= article.copy %></label>
-                <button type="submit" id="share">
+          <form action="/article/<%=article.slug%>" method="post" id="like-counter">
+            <label for="like-checkbox">
+                <label for="like">
                     <svg 
                     height="30px" 
                     width="30px" 
@@ -39,8 +38,14 @@
                    C52.216,18.553,51.97,16.611,51.911,16.242z"/>
                     </svg>
                     <%-share%>
-                </button>
-            </form>
+                </label>
+                <input type="checkbox" id="like-checkbox" name="slug" value="<%-article.slug%>">
+            </label>
+            <!-- <input type="hidden" name="slug" value="<%-article.slug%>"> -->
+            <!-- <button type="submit" id="share">
+            </button> -->
+        </form>
+        
         </div>
 
         <section class="article-detail_author">

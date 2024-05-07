@@ -27,7 +27,7 @@
 
     --default-padding: 1em;
 
-    --transition-flow: 0.5s ease, color .1s ease;
+    --transition-flow: 0.5s ease-out, color .1s ease;
 }
 
 html {
@@ -84,6 +84,7 @@ blockquote p {
     font-family: var(--font-serif);
 
     font-weight: 900;
+    line-height: 1.3em;
 }
 
 blockquote {
@@ -94,9 +95,12 @@ blockquote {
     color: var(--primary-color-1);
     line-height: 1.5em;
 }
+
 a {
     color: var(--active-color-1);
     text-decoration: none;
+    transition: var(--transition-flow);
+
 }
 
 a:active {
@@ -105,7 +109,6 @@ a:active {
 
 a:hover {
     color: var(--active-color-1_hover);
-    transition: var(--transition-flow);
 }
 
 button {
@@ -124,7 +127,8 @@ button:hover {
 }
 
 a,
-button {
+button,
+summary {
     cursor: pointer;
 }
 
@@ -164,24 +168,30 @@ header input {
 footer {
     background-color: var(--primary-color-1);
     color: var(--primary-color-4);
-    margin: auto;
     width: 100%;
-    padding: var(--default-padding)
+    height: auto;
 }
 
 footer div {
     padding: 1em 0;
 }
 
-footer div details summary {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    padding: 1em 0;
+footer div details{
     border-top: var(--border-style-white);
 }
 
-footer div details summary:last-child {
+footer div details[open],
+footer div details {
+    padding: 1em 0;
+}
+
+footer div details:last-child {
     border-bottom: var(--border-style-white);
+}
+
+footer div details summary {
+    font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 footer div details summary:hover {
@@ -196,6 +206,10 @@ footer div details summary::marker {
     width: 0;
     height: 0;
     margin-right: 8px; 
+}
+
+.main-footer{
+    padding: 1em;
 }
 
 button#share {
@@ -236,3 +250,69 @@ button#share::after {
     display: flex;
     gap: .5em;
 }
+
+form#like-counter {
+    background-color: var(--primary-color-2);
+    padding: .5em;
+    font-weight: 900;
+    cursor: pointer;
+    border: var(--border-style-black);
+}
+
+form#like-counter input[type='checkbox']{
+    display: none;
+}
+
+form#like-counter [for=like]{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+form#like-counter [for=like] svg{
+    fill: var(--primary-color-1);
+    height: 2em;
+}
+
+form#like-counter label[for=like]:hover{
+    fill: var(--primary-color-3);
+    color: var(--primary-color-3);
+}
+
+form#like-counter .like-checkbox {
+    position: absolute;
+    left: -100vw;
+}
+
+
+
+
+
+
+form#like-counter-liked {
+    background-color: var(--active-color-1);
+    padding: 1em;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--primary-color-4);
+    border: var(--border-style-black);
+}
+
+form#like-counter-liked input[type='checkbox']{
+    display: none;
+}
+
+form#like-counter-liked [for=like]{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+form#like-counter-liked [for=like] svg{
+    fill: var(--primary-color-4);
+    height: 2em;
+}
+
+
+
+
