@@ -252,49 +252,33 @@ button#share::after {
     padding: .5em;
 }
 
-form#like-counter {
+/* Style for the button */
+.checkbox-button {
+    display: inline-block;
     background-color: var(--primary-color-2);
     padding: .5em;
     font-weight: 900;
     cursor: pointer;
-    border: var(--border-style-black);     
+    border: var(--border-style-black);
 }
 
-form#like-counter input[id='like-checkbox']{
-    position: absolute;
-    left: -100vw;
+/* Hide the actual checkbox */
+#like-checkbox {
+    opacity: 0;
+    cursor: pointer;
+    display: none;}
+
+/* Style for the checked state */
+#like-checkbox:checked + .checkbox-button {
+    background-color: var(--secondary-color-2);
 }
 
-form#like-counter:hover{
+/* Hover effect */
+#like-counter:hover .checkbox-button {
     color: var(--primary-color-3);
     background-color: var(--primary-color-1);
     transition: var(--transition-flow);
 }
-
-form#like-counter .like-checkbox {
-    position: ;
-    left: -100vw;
-}
-
-[id="like-checkbox"]:checked + form#like-counter {
-    background-color: var(--secondary-color-2);
-  }
-
-
-form#like-counter-liked {
-    background-color: var(--active-color-1);
-    padding: 1em;
-    font-weight: 900;
-    cursor: pointer;
-    color: var(--primary-color-4);
-    border: var(--border-style-black);
-}
-
-form#like-counter-liked input[type='checkbox']{
-    display: none;
-}
-
-
 
 
 
